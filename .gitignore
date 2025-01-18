@@ -1,0 +1,4 @@
+node_modules
+logger.log
+.env
+.env.*
