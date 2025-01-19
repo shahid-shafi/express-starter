@@ -36,6 +36,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/v1', combinedRouter);
+app.use("/", (_, res) => {
+  res.sendFile(path.join(__dirname, "../public", "index.html"));
+});
 
 app.all(
   '*',
